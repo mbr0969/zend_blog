@@ -35,8 +35,6 @@ class Category
      */
     private $categoryName;
 
-
-
     /**
      * Get id
      *
