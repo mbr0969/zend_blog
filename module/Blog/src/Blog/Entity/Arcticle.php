@@ -193,13 +193,13 @@ class Arcticle
 
     public function getArticleForTable(){
         $article = strip_tags($this->getArticle());
-        $article = mb_substr($article,0,15,'UTF-8').'...';
+        $article = mb_substr($article,0,25,'UTF-8').'...';
         return $article;
     }
 
     public function getShortArticleForTable() {
         $article = strip_tags($this->getShotAricle());
-        $article = mb_substr($article,0,20).'...';
+        $article = mb_substr($article,0,20,'UTF-8').'...';
         return $article;
 
     }

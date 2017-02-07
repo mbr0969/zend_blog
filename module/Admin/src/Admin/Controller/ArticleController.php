@@ -11,7 +11,7 @@ class ArticleController  extends BaseController{
     public function indexAction() {
 
         $query = $this->getEntityManager()->createQueryBuilder();
-        $query->select('a')->from('Blog\Entity\Article', 'a')->orderBy('a.id','DESC');
+        $query->select('a')->from('Blog\Entity\Arcticle', 'a')->orderBy('a.id','DESC');
 
         //Пагинация
         $adapter = new DoctrineAdapter(new ORMPaginator($query));
