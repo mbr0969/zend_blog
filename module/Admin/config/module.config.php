@@ -5,6 +5,7 @@ array(
         'invokables'=>array(
                   'Admin\Controller\Index'=> 'Admin\Controller\IndexController',
                   'category' => 'Admin\Controller\CategoryController',
+                  'article' =>'Admin\Controller\ArticleController',
         ),        
     ),   
     
@@ -33,7 +34,17 @@ array(
                                     ),
                                   
                                 ),
-                            ),                
+                               'article' => array(
+                                  'type' => 'segment',
+                                    'options' =>array(
+                                       'route' => 'article/[:action/][:id/]',
+                                       'defaults' => array(
+                                                     'controller' => 'article',
+                                                      'action'    =>  'index',
+                                       ),
+                                   ),
+                               ),
+                            ), //child_route
                         ),
                   ),
              ),
