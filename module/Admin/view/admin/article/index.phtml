@@ -41,7 +41,7 @@
                       <td>{$item->getShortArticleForTable()}</td> 
                       <td>{$isPublic}</td>";
 
-            echo '<td><a href=" '.$this->url('admin/article', array('action' => 'edit', 'id'=>$item->getId())).'">Редактировать</a>&nbsp;&nbsp
+            echo '<td><a href=" '.$this->url('admin/article', array('action' => 'edit', 'id'=>$item->getId())).'">Редактировать</a>&nbsp;&nbsp;
                            <a href=" '.$this->url('admin/article', array('action' => 'delete', 'id'=>$item->getId())).
                 '" onclick="if (confirm(\' Удалить запись?\'))  {document.location = this.href;} return false;">Удалить</a></td>';
         }
@@ -49,7 +49,7 @@
     </tbody>
 </table>
 
-<?php $this->paginationControl($articles,'Sliding','pagination_control',array('route' =>'admin/article'));
+<?php echo $this->paginationControl($articles,'Sliding','pagination_control',array('route' =>'admin/article'));
 
 
 ?>
