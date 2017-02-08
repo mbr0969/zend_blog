@@ -15,7 +15,7 @@
             $attributes = $element->getAttributes();
             
             if ($element->getLabel()) {
-                $element->setLabelAttributes(array('class' => 'col-lg-2 control-lable'));
+                $element->setLabelAttributes(array('class' => 'col-lg-2 control-label'));
                 if (isset($attributes['required'])) {
                     $element->setLabel($element->getLabel() . ' *');
                 }
