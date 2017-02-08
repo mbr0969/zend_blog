@@ -3,6 +3,7 @@
         <?php
 
         $form->setAttribute('action', $this->url('admin/article', array('action' => 'add')));
+
         $form->prepare();
 
         echo $this->form()->openTag($form);
@@ -10,7 +11,7 @@
             echo '<fieldset><legend>Добавление статьи</legend>';
 
             foreach ($form as $element) {
-                //  var_dump($element);
+
                 echo '<div class="form-group">';
                 $attributes = $element->getAttributes();
 
@@ -21,7 +22,7 @@
                     if (isset($attributes['required'])) {
                         $label .=' &nbsp; *';
                     }
-                    $label = "<label class='col-lg-2 control-label'>{$label}</label>>";
+                    $label = "<label class='col-lg-2 control-label'>{$label}</label>";
                 }
 
                 $type = isset($attributes['type']) ? $attributes['type'] : '';
@@ -36,9 +37,12 @@
                       break;
 
                     case 'select' :
-                        $formElement = $this->formTextArea($element);
+                        $formElement = $this->formSelect($element);
                       break;
 
+                    default:
+                        $formElement =$this->Row($element);
+                        $label = '';
                 }
 
                echo "{$label} <div class='col-lg-10'> {$formElement}</div>";

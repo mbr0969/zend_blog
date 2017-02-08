@@ -25,7 +25,8 @@ class ArticleController  extends BaseController{
     }
 
     public function addAction(){
-        $em= $this->entityManager();
+
+        $em= $this->getEntityManager();
         $form = new ArticleAddForm($em);
 
         $request = $this->getRequest();
