@@ -65,7 +65,7 @@ class ArticleAddForm extends Form  implements ObjectManagerAwareInterface {
                 ),
             ));
         $this->add(array(
-            'name' => 'shotArticle',
+            'name' => 'shotAricle',
             'type' => 'Textarea',
             'options' => array(
                   'label' => 'Начало статьи',
@@ -76,7 +76,7 @@ class ArticleAddForm extends Form  implements ObjectManagerAwareInterface {
             ));
 
         $this->add(array(
-            'name' => 'arcticle',
+            'name' => 'article',
             'type' => 'Textarea',
             'options' => array(
                 'label' => 'Текст статьи',

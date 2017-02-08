@@ -30,7 +30,7 @@ class ArticleAddInputFilter extends InputFilter{
 
 
         $this->add(array(
-                'name' => 'shotArticle',
+                'name' => 'shotAricle',
                 'required' => false,
                 'validators' => array(
                     array(
@@ -46,7 +46,7 @@ class ArticleAddInputFilter extends InputFilter{
          ));
 
         $this->add(array(
-           'name' => 'arcticle',
+           'name' => 'article',
            'required' => true,
             'filters' => array(
                      array('name' => 'StringTrim'),

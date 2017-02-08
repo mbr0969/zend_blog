@@ -19,7 +19,7 @@ class ArticleController  extends BaseController{
         //Пагинация
         $adapter = new DoctrineAdapter(new ORMPaginator($query));
         $paginator = new Paginator($adapter);
-        $paginator->setDefaultItemCountPerPage(2);
+        $paginator->setDefaultItemCountPerPage(4);
         $paginator->setCurrentPageNumber((int) $this->params()->fromQuery('page',1));
         return array('articles'=>$paginator);
     }
