@@ -4,8 +4,11 @@ return array(
     'modules' => array(
         'Application',
         'ZendDeveloperTools',
+
         'DoctrineModule',
         'DoctrineORMModule',
+
+        'EdpModuleLayouts',
         'Blog',
         'Admin',
     ),

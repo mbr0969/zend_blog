@@ -201,8 +201,19 @@ class Arcticle
         $article = strip_tags($this->getShotAricle());
         $article = mb_substr($article,0,20,'UTF-8').'...';
         return $article;
-
     }
 
+   public function getShortArticleForBlog(){
+        $article = $this->getShotAricle();
 
+        if (empty($article)){
+            $article = $this->getArticle();
+        }
+        return $article;
+    }
+
+    public function getFullArticle() {
+        $article = $this->getArticle();
+        return $article;
+   }
 }

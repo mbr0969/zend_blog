@@ -109,5 +109,13 @@ array(
         'template_map' => array(
             'pagination_control' => __DIR__.'/../view/layout/pagination_control.phtml',
         ),
-    ),   
+    ),
+
+    'module_layouts' =>array(
+        'Admin' => 'layout/admin-layout'
+
+//      'Admin' => array(
+//                'default' =>'layout/admin-layout'
+//      ),
+    ),
 );
